@@ -23,6 +23,7 @@ add_library(${PROJECT_NAME}
         reporters/CIBuildOnlyReporter.cpp
         reporters/CIBuildOnlyReporterUtils.cpp
         reporters/ClipboardReporter.cpp
+        reporters/CombinationReporter.cpp
         reporters/CommandReporter.cpp
         reporters/DefaultReporter.cpp
         reporters/DefaultReporterDisposer.cpp
