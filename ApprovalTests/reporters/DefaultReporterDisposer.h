@@ -13,16 +13,9 @@ namespace ApprovalTests
 
     public:
         explicit DefaultReporterDisposer(
-            const std::shared_ptr<Reporter>& reporter)
-        {
-            previous_result = DefaultReporterFactory::getDefaultReporter();
-            DefaultReporterFactory::setDefaultReporter(reporter);
-        }
+            const std::shared_ptr<Reporter>& reporter);
 
-        ~DefaultReporterDisposer()
-        {
-            DefaultReporterFactory::setDefaultReporter(previous_result);
-        }
+        ~DefaultReporterDisposer();
     };
 }
 
