@@ -5,6 +5,7 @@
 #include "ApprovalTests/reporters/FrontLoadedReporterDisposer.h"
 #include "ApprovalTests/comparators/ComparatorFactory.h"
 #include "ApprovalTests/core/ApprovalWriter.h"
+#include "ApprovalTests/reporters/FrontLoadedReporterFactory.h"
 #include "ApprovalTests/utilities/FileUtils.h"
 
 ApprovalTests::ComparatorDisposer

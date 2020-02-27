@@ -1,8 +1,10 @@
 #ifndef APPROVALTESTS_CPP_FRONTLOADEDREPORTERDISPOSER_H
 #define APPROVALTESTS_CPP_FRONTLOADEDREPORTERDISPOSER_H
 
-#include "FrontLoadedReporterFactory.h"
+#include "ApprovalTests/core/Reporter.h"
 #include "ApprovalTests/utilities/Macros.h"
+
+#include <memory>
 
 namespace ApprovalTests
 {
@@ -14,17 +16,9 @@ namespace ApprovalTests
 
     public:
         explicit FrontLoadedReporterDisposer(
-            const std::shared_ptr<Reporter>& reporter)
-        {
-            previous_result =
-                FrontLoadedReporterFactory::getFrontLoadedReporter();
-            FrontLoadedReporterFactory::setFrontLoadedReporter(reporter);
-        }
+            const std::shared_ptr<Reporter>& reporter);
 
-        ~FrontLoadedReporterDisposer()
-        {
-            FrontLoadedReporterFactory::setFrontLoadedReporter(previous_result);
-        }
+        ~FrontLoadedReporterDisposer();
     };
 }
 
