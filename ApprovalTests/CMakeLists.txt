@@ -19,6 +19,7 @@ add_library(${PROJECT_NAME}
         namers/SubdirectoryDisposer.cpp
         reporters/AutoApproveIfMissingReporter.cpp
         reporters/AutoApproveReporter.cpp
+        reporters/BlockingReporter.cpp
         reporters/CIBuildOnlyReporter.cpp
         reporters/ClipboardReporter.cpp
         reporters/CommandReporter.cpp
