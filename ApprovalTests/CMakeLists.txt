@@ -2,26 +2,26 @@ project(ApprovalTests CXX)
 set(CMAKE_CXX_STANDARD 11)
 add_library(${PROJECT_NAME}
         Approvals.cpp
-        reporters/DefaultReporter.cpp
-        reporters/DefaultReporterDisposer.cpp
-        reporters/AutoApproveIfMissingReporter.cpp
-        reporters/AutoApproveReporter.cpp
-        core/FileApprover.cpp
-        core/ApprovalException.cpp
-        namers/DefaultNamerFactory.cpp
-        namers/DefaultNamerDisposer.cpp
-        reporters/DefaultReporterFactory.cpp
         comparators/ComparatorDisposer.cpp
         comparators/ComparatorFactory.cpp
         comparators/TextFileComparator.cpp
-        utilities/SystemUtils.cpp
-        reporters/CommandReporter.cpp
+        core/ApprovalException.cpp
+        core/FileApprover.cpp
         namers/ApprovalTestNamer.cpp
+        namers/DefaultNamerDisposer.cpp
+        namers/DefaultNamerFactory.cpp
+        namers/HelpMessages.cpp
+        reporters/AutoApproveIfMissingReporter.cpp
+        reporters/AutoApproveReporter.cpp
         reporters/CIBuildOnlyReporter.cpp
+        reporters/ClipboardReporter.cpp
+        reporters/CommandReporter.cpp
+        reporters/DefaultReporter.cpp
+        reporters/DefaultReporterDisposer.cpp
+        reporters/DefaultReporterFactory.cpp
         reporters/DiffInfo.cpp
         utilities/FileUtils.cpp
-        reporters/ClipboardReporter.cpp
-        namers/HelpMessages.cpp
+        utilities/SystemUtils.cpp
         )
 add_library(ApprovalTests::ApprovalTests ALIAS ApprovalTests)
 target_include_directories(${PROJECT_NAME}
