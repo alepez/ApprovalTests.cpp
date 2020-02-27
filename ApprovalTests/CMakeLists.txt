@@ -32,6 +32,7 @@ add_library(${PROJECT_NAME}
         reporters/DefaultReporterDisposer.cpp
         reporters/DefaultReporterFactory.cpp
         reporters/DiffInfo.cpp
+        reporters/DiffReporter.cpp
         reporters/TextDiffReporter.cpp
         utilities/ExceptionCollector.cpp
         utilities/FileUtilsSystemSpecific.cpp
