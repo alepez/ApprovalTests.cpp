@@ -2,7 +2,7 @@
 #define APPROVALTESTS_CPP_SEPARATEAPPROVEDANDRECEIVEDDIRECTORIESNAMER_H
 
 #include "ApprovalTestNamer.h"
-#include "../Approvals.h"
+#include "DefaultNamerDisposer.h"
 
 namespace ApprovalTests
 {
@@ -14,39 +14,15 @@ namespace ApprovalTests
 
         std::string getFullFileNameWithExtraDirectory(
             const std::string& approved,
-            const std::string& extensionWithDot) const
-        {
-            std::string outputDirectory = getDirectory() + approved;
-            SystemUtils::ensureDirectoryExists(outputDirectory);
-
-            std::string outputFile =
-                getFileName() + "." + getTestName() + extensionWithDot;
-
-            return outputDirectory + SystemUtils::getDirectorySeparator() +
-                   outputFile;
-        }
+            const std::string& extensionWithDot) const;
 
         virtual std::string
-        getApprovedFile(std::string extensionWithDot) const override
-        {
-            return getFullFileNameWithExtraDirectory("approved",
-                                                     extensionWithDot);
-        }
+        getApprovedFile(std::string extensionWithDot) const override;
 
         virtual std::string
-        getReceivedFile(std::string extensionWithDot) const override
-        {
-            return getFullFileNameWithExtraDirectory("received",
-                                                     extensionWithDot);
-        }
+        getReceivedFile(std::string extensionWithDot) const override;
 
-        static DefaultNamerDisposer useAsDefaultNamer()
-        {
-            return Approvals::useAsDefaultNamer([]() {
-                return std::make_shared<
-                    SeparateApprovedAndReceivedDirectoriesNamer>();
-            });
-        }
+        static DefaultNamerDisposer useAsDefaultNamer();
     };
 }
 
