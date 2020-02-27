@@ -3,6 +3,8 @@
 
 #include "ApprovalTests/core/ApprovalComparator.h"
 
+#include <fstream>
+
 namespace ApprovalTests
 {
     class TextFileComparator : public ApprovalComparator
