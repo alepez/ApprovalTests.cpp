@@ -2,6 +2,7 @@
 #include "ApprovalTests/comparators/ComparatorDisposer.h"
 #include "ApprovalTests/core/ApprovalException.h"
 #include "ApprovalTests/core/FileApprover.h"
+#include "ApprovalTests/utilities/FileUtils.h"
 #include "Approvals.h"
 #include <fstream>
 #include <iterator>

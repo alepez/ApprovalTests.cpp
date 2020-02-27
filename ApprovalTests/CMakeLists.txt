@@ -7,6 +7,7 @@ add_library(${PROJECT_NAME}
         comparators/TextFileComparator.cpp
         core/ApprovalException.cpp
         core/FileApprover.cpp
+        launchers/SystemLauncher.cpp
         namers/ApprovalTestNamer.cpp
         namers/DefaultNamerDisposer.cpp
         namers/DefaultNamerFactory.cpp

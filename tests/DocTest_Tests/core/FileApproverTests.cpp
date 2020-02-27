@@ -4,6 +4,7 @@
 #include "ApprovalTests/namers/ApprovalTestNamer.h"
 #include "ApprovalTests/core/FileApprover.h"
 #include "ApprovalTests/core/ApprovalException.h"
+#include "ApprovalTests/utilities/FileUtils.h"
 #include "ApprovalTests/Approvals.h"
 
 using namespace ApprovalTests;
