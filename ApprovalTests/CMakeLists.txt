@@ -12,10 +12,10 @@ add_library(${PROJECT_NAME}
         namers/DefaultNamerDisposer.cpp
         namers/DefaultNamerFactory.cpp
         namers/ExistingFileNamer.cpp
-        namers/NamerFactory.cpp
-        namers/SeparateApprovedAndReceivedDirectoriesNamer.cpp
-        namers/SectionNameDisposer.cpp
         namers/HelpMessages.cpp
+        namers/NamerFactory.cpp
+        namers/SectionNameDisposer.cpp
+        namers/SeparateApprovedAndReceivedDirectoriesNamer.cpp
         namers/SubdirectoryDisposer.cpp
         reporters/AutoApproveIfMissingReporter.cpp
         reporters/AutoApproveReporter.cpp
@@ -40,8 +40,8 @@ add_library(${PROJECT_NAME}
         reporters/QuietReporter.cpp
         reporters/TextDiffReporter.cpp
         utilities/ExceptionCollector.cpp
-        utilities/FileUtilsSystemSpecific.cpp
         utilities/FileUtils.cpp
+        utilities/FileUtilsSystemSpecific.cpp
         utilities/MachineBlocker.cpp
         utilities/StringUtils.cpp
         utilities/SystemUtils.cpp
