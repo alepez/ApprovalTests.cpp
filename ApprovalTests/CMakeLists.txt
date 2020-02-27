@@ -21,6 +21,7 @@ add_library(${PROJECT_NAME}
         reporters/AutoApproveReporter.cpp
         reporters/BlockingReporter.cpp
         reporters/CIBuildOnlyReporter.cpp
+        reporters/CIBuildOnlyReporterUtils.cpp
         reporters/ClipboardReporter.cpp
         reporters/CommandReporter.cpp
         reporters/DefaultReporter.cpp
