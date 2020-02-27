@@ -33,6 +33,7 @@ add_library(${PROJECT_NAME}
         utilities/MachineBlocker.cpp
         utilities/StringUtils.cpp
         utilities/SystemUtils.cpp
+        writers/ExistingFile.cpp
         )
 add_library(ApprovalTests::ApprovalTests ALIAS ApprovalTests)
 target_include_directories(${PROJECT_NAME}

@@ -2,9 +2,7 @@
 #define APPROVALTESTS_CPP_EXISTINGFILE_H
 
 #include <string>
-#include <utility>
 #include "ApprovalTests/core/ApprovalWriter.h"
-#include "ApprovalTests/utilities/FileUtils.h"
 
 namespace ApprovalTests
 {
@@ -13,23 +11,11 @@ namespace ApprovalTests
         std::string filePath;
 
     public:
-        explicit ExistingFile(std::string filePath)
-            : filePath(std::move(filePath))
-        {
-        }
-        virtual std::string getFileExtensionWithDot() const override
-        {
-            return FileUtils::getExtensionWithDot(filePath);
-        }
-        virtual void write(std::string /*path*/) const override
-        {
-            // do nothing
-        }
+        explicit ExistingFile(std::string filePath);
+        virtual std::string getFileExtensionWithDot() const override;
+        virtual void write(std::string /*path*/) const override;
         virtual void
-            cleanUpReceived(std::string /*receivedPath*/) const override
-        {
-            // do nothing
-        }
+            cleanUpReceived(std::string /*receivedPath*/) const override;
     };
 }
 
