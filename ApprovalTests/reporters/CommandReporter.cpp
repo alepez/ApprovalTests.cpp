@@ -1,6 +1,9 @@
 #include "CommandReporter.h"
 
 #include "ApprovalTests/launchers/CommandLauncher.h"
+#include "ApprovalTests/utilities/FileUtils.h"
+#include "ApprovalTests/utilities/StringUtils.h"
+#include "ApprovalTests/utilities/SystemUtils.h"
 
 namespace ApprovalTests
 {

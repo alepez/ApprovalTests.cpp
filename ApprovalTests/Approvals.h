@@ -6,6 +6,7 @@
 #include "reporters/FrontLoadedReporterDisposer.h"
 #include "namers/SubdirectoryDisposer.h"
 #include "namers/DefaultNamerDisposer.h"
+#include "utilities/StringUtils.h"
 
 namespace ApprovalTests
 {
