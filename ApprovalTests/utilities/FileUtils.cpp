@@ -2,6 +2,7 @@
 
 #include <sys/stat.h>
 #include <sstream>
+#include <fstream>
 #include "ApprovalTests/writers/StringWriter.h"
 
 namespace ApprovalTests

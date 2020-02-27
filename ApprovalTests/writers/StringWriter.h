@@ -2,9 +2,6 @@
 #define APPROVALTESTS_CPP_STRINGWRITER_H
 
 #include <string>
-#include <fstream>
-#include <stdexcept>
-#include <utility>
 #include "ApprovalTests/core/ApprovalWriter.h"
 
 namespace ApprovalTests
@@ -17,36 +14,15 @@ namespace ApprovalTests
 
     public:
         explicit StringWriter(std::string contents,
-                              std::string fileExtensionWithDot = ".txt")
-            : s(std::move(contents)), ext(std::move(fileExtensionWithDot))
-        {
-        }
+                              std::string fileExtensionWithDot = ".txt");
 
-        std::string getFileExtensionWithDot() const override
-        {
-            return ext;
-        }
+        std::string getFileExtensionWithDot() const override;
 
-        void write(std::string path) const override
-        {
-            std::ofstream out(path.c_str(), std::ofstream::out);
-            if (!out)
-            {
-                throw std::runtime_error("Unable to write file: " + path);
-            }
-            this->Write(out);
-            out.close();
-        }
+        void write(std::string path) const override;
 
-        void Write(std::ostream& out) const
-        {
-            out << s << "\n";
-        }
+        void Write(std::ostream& out) const;
 
-        virtual void cleanUpReceived(std::string receivedPath) const override
-        {
-            remove(receivedPath.c_str());
-        }
+        virtual void cleanUpReceived(std::string receivedPath) const override;
     };
 }
 #endif
