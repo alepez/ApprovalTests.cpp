@@ -11,16 +11,16 @@ namespace ApprovalTests
     bool FileUtils::fileExists(const std::string& path)
     {
         struct stat info
-            {
-            };
+        {
+        };
         return stat(path.c_str(), &info) == 0;
     }
 
     int FileUtils::fileSize(const std::string& path)
     {
         struct stat statbuf
-            {
-            };
+        {
+        };
         int stat_ok = stat(path.c_str(), &statbuf);
 
         if (stat_ok == -1)
