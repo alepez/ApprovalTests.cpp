@@ -18,7 +18,8 @@ add_library(${PROJECT_NAME}
         reporters/CommandReporter.cpp
         namers/ApprovalTestNamer.cpp
         reporters/CIBuildOnlyReporter.cpp
-        reporters/DiffInfo.cpp)
+        reporters/DiffInfo.cpp
+        utilities/FileUtils.cpp)
 add_library(ApprovalTests::ApprovalTests ALIAS ApprovalTests)
 target_include_directories(${PROJECT_NAME}
         PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/..
