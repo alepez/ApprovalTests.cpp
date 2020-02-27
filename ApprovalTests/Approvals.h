@@ -26,31 +26,18 @@ namespace ApprovalTests
         ~Approvals() = default;
 
     public:
-        static std::shared_ptr<ApprovalNamer> getDefaultNamer()
-        {
-            return DefaultNamerFactory::getDefaultNamer()();
-        }
+        static std::shared_ptr<ApprovalNamer> getDefaultNamer();
 
         static void verify(std::string contents,
-                           const Reporter& reporter = DefaultReporter())
-        {
-            verifyWithExtension(contents, ".txt", reporter);
-        }
+                           const Reporter& reporter = DefaultReporter());
 
         static void
         verifyWithExtension(std::string contents,
                             const std::string& fileExtensionWithDot,
-                            const Reporter& reporter = DefaultReporter())
-        {
-            StringWriter writer(contents, fileExtensionWithDot);
-            FileApprover::verify(*getDefaultNamer(), writer, reporter);
-        }
+                            const Reporter& reporter = DefaultReporter());
 
         static void verify(const ApprovalWriter& writer,
-                           const Reporter& reporter = DefaultReporter())
-        {
-            FileApprover::verify(*getDefaultNamer(), writer, reporter);
-        }
+                           const Reporter& reporter = DefaultReporter());
 
         template <typename T>
         using IsNotDerivedFromWriter =
@@ -103,19 +90,7 @@ namespace ApprovalTests
 
         static void
         verifyExceptionMessage(std::function<void(void)> functionThatThrows,
-                               const Reporter& reporter = DefaultReporter())
-        {
-            std::string message = "*** no exception thrown ***";
-            try
-            {
-                functionThatThrows();
-            }
-            catch (const std::exception& e)
-            {
-                message = e.what();
-            }
-            verify(message, reporter);
-        }
+                               const Reporter& reporter = DefaultReporter());
 
         template <typename Iterator>
         static void verifyAll(std::string header,
@@ -171,35 +146,19 @@ namespace ApprovalTests
 
         static void
         verifyExistingFile(const std::string filePath,
-                           const Reporter& reporter = DefaultReporter())
-        {
-            ExistingFile writer(filePath);
-            ExistingFileNamer namer(filePath);
-            FileApprover::verify(namer, writer, reporter);
-        }
+                           const Reporter& reporter = DefaultReporter());
 
         static SubdirectoryDisposer
-        useApprovalsSubdirectory(std::string subdirectory = "approval_tests")
-        {
-            return SubdirectoryDisposer(subdirectory);
-        }
+        useApprovalsSubdirectory(std::string subdirectory = "approval_tests");
 
         static DefaultReporterDisposer
-        useAsDefaultReporter(const std::shared_ptr<Reporter>& reporter)
-        {
-            return DefaultReporterDisposer(reporter);
-        }
+        useAsDefaultReporter(const std::shared_ptr<Reporter>& reporter);
 
         static FrontLoadedReporterDisposer
-        useAsFrontLoadedReporter(const std::shared_ptr<Reporter>& reporter)
-        {
-            return FrontLoadedReporterDisposer(reporter);
-        }
+        useAsFrontLoadedReporter(const std::shared_ptr<Reporter>& reporter);
 
-        static DefaultNamerDisposer useAsDefaultNamer(NamerCreator namerCreator)
-        {
-            return DefaultNamerDisposer(namerCreator);
-        }
+        static DefaultNamerDisposer
+        useAsDefaultNamer(NamerCreator namerCreator);
     };
 }
 
