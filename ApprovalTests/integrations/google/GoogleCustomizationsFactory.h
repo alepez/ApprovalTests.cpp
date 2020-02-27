@@ -2,6 +2,7 @@
 #define APPROVALTESTS_CPP_GOOGLECUSTOMIZATIONSFACTORY_H
 
 #include "ApprovalTests/utilities/StringUtils.h"
+#include "ApprovalTests/utilities/Macros.h"
 
 #include <vector>
 #include <functional>

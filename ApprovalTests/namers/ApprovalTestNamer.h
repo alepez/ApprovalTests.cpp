@@ -7,6 +7,7 @@
 #include <stdexcept>
 #include "ApprovalTests/utilities/SystemUtils.h"
 #include "ApprovalTests/namers/HelpMessages.h"
+#include "ApprovalTests/utilities/FileUtils.h"
 
 namespace ApprovalTests
 {

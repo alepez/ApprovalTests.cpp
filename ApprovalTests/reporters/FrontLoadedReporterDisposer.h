@@ -2,6 +2,7 @@
 #define APPROVALTESTS_CPP_FRONTLOADEDREPORTERDISPOSER_H
 
 #include "FrontLoadedReporterFactory.h"
+#include "ApprovalTests/utilities/Macros.h"
 
 namespace ApprovalTests
 {
