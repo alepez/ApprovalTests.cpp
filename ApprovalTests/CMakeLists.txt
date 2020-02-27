@@ -30,6 +30,7 @@ add_library(${PROJECT_NAME}
         utilities/ExceptionCollector.cpp
         utilities/FileUtilsSystemSpecific.cpp
         utilities/FileUtils.cpp
+        utilities/MachineBlocker.cpp
         utilities/StringUtils.cpp
         utilities/SystemUtils.cpp
         )
