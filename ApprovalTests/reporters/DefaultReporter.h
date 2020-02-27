@@ -2,7 +2,6 @@
 #define APPROVALTESTS_CPP_DEFAULTREPORTER_H
 
 #include "ApprovalTests/core/Reporter.h"
-#include "DefaultReporterFactory.h"
 
 #include <string>
 
@@ -12,11 +11,7 @@ namespace ApprovalTests
     {
     public:
         virtual bool report(std::string received,
-                            std::string approved) const override
-        {
-            return DefaultReporterFactory::getDefaultReporter()->report(
-                received, approved);
-        }
+                            std::string approved) const override;
     };
 }
 
