@@ -22,6 +22,7 @@ add_library(${PROJECT_NAME}
         integrations/CheckFileMacroIsAbsolute.h
         integrations/catch/Catch2Approvals.h
         integrations/doctest/DocTestApprovals.h
+        integrations/google/GoogleConfiguration.cpp
         integrations/google/GoogleConfiguration.h
         integrations/google/GoogleCustomizationsFactory.h
         integrations/google/GoogleTestApprovals.h
