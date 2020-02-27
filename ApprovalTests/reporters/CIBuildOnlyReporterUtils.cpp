@@ -10,6 +10,6 @@ namespace ApprovalTests
         const std::shared_ptr<Reporter>& reporter)
     {
         return Approvals::useAsFrontLoadedReporter(
-            std::make_shared<ApprovalTests::CIBuildOnlyReporter>(reporter));
+            std::make_shared<CIBuildOnlyReporter>(reporter));
     }
 }

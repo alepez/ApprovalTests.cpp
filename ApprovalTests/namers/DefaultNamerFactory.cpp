@@ -2,22 +2,23 @@
 
 #include "ApprovalTestNamer.h"
 
-ApprovalTests::NamerCreator& ApprovalTests::DefaultNamerFactory::defaultNamer()
+namespace ApprovalTests
 {
-    static NamerCreator namer = []() {
-        return std::make_shared<ApprovalTestNamer>();
-    };
-    return namer;
-}
+    NamerCreator& DefaultNamerFactory::defaultNamer()
+    {
+        static NamerCreator namer = []() {
+            return std::make_shared<ApprovalTestNamer>();
+        };
+        return namer;
+    }
 
-ApprovalTests::NamerCreator
-ApprovalTests::DefaultNamerFactory::getDefaultNamer()
-{
-    return defaultNamer();
-}
+    NamerCreator DefaultNamerFactory::getDefaultNamer()
+    {
+        return defaultNamer();
+    }
 
-void ApprovalTests::DefaultNamerFactory::setDefaultNamer(
-    ApprovalTests::NamerCreator namer)
-{
-    defaultNamer() = std::move(namer);
+    void DefaultNamerFactory::setDefaultNamer(NamerCreator namer)
+    {
+        defaultNamer() = std::move(namer);
+    }
 }

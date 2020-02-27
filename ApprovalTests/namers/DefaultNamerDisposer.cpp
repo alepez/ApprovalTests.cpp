@@ -1,13 +1,15 @@
 #include "DefaultNamerDisposer.h"
 
-ApprovalTests::DefaultNamerDisposer::DefaultNamerDisposer(
-    ApprovalTests::NamerCreator namerCreator)
+namespace ApprovalTests
 {
-    previous_result = DefaultNamerFactory::getDefaultNamer();
-    DefaultNamerFactory::setDefaultNamer(std::move(namerCreator));
-}
+    DefaultNamerDisposer::DefaultNamerDisposer(NamerCreator namerCreator)
+    {
+        previous_result = DefaultNamerFactory::getDefaultNamer();
+        DefaultNamerFactory::setDefaultNamer(std::move(namerCreator));
+    }
 
-ApprovalTests::DefaultNamerDisposer::~DefaultNamerDisposer()
-{
-    DefaultNamerFactory::setDefaultNamer(previous_result);
+    DefaultNamerDisposer::~DefaultNamerDisposer()
+    {
+        DefaultNamerFactory::setDefaultNamer(previous_result);
+    }
 }

@@ -2,13 +2,16 @@
 #include "AutoApproveReporter.h"
 #include "ApprovalTests/utilities/FileUtils.h"
 
-bool ApprovalTests::AutoApproveIfMissingReporter::report(
-    std::string received, std::string approved) const
+namespace ApprovalTests
 {
-    if (FileUtils::fileExists(approved))
+    bool AutoApproveIfMissingReporter::report(std::string received,
+                                              std::string approved) const
     {
-        return false;
-    }
+        if (FileUtils::fileExists(approved))
+        {
+            return false;
+        }
 
-    return AutoApproveReporter().report(received, approved);
+        return AutoApproveReporter().report(received, approved);
+    }
 }
