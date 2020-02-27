@@ -2,6 +2,7 @@
 #include "ApprovalTests/namers/ApprovalTestNamer.h"
 
 #include "ApprovalTests/integrations/google/GoogleConfiguration.h"
+#include "ApprovalTests/utilities/StringUtils.h"
 
 using namespace ApprovalTests;
 

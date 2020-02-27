@@ -24,6 +24,7 @@ add_library(${PROJECT_NAME}
         integrations/doctest/DocTestApprovals.h
         integrations/google/GoogleConfiguration.cpp
         integrations/google/GoogleConfiguration.h
+        integrations/google/GoogleCustomizationsFactory.cpp
         integrations/google/GoogleCustomizationsFactory.h
         integrations/google/GoogleTestApprovals.h
         integrations/ut/UTApprovals.h

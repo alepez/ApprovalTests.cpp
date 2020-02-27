@@ -1,5 +1,7 @@
 #include "GoogleConfiguration.h"
 
+#include "ApprovalTests/utilities/StringUtils.h"
+
 namespace ApprovalTests
 {
     bool GoogleConfiguration::addTestCaseNameRedundancyCheck(
