@@ -2,6 +2,7 @@
 #include "ApprovalTests/core/ApprovalNamer.h"
 #include "ApprovalTests/namers/SeparateApprovedAndReceivedDirectoriesNamer.h"
 #include "ApprovalTests/namers/NamerFactory.h"
+#include "ApprovalTests/utilities/SystemUtils.h"
 #include "ApprovalTests/Approvals.h"
 
 #include <memory>
