@@ -2,6 +2,7 @@
 #include "ApprovalTests/Approvals.h"
 #include "ApprovalTests/writers/StringWriter.h"
 #include "ApprovalTests/reporters/CustomReporter.h"
+#include "ApprovalTests/reporters/DiffInfo.h"
 
 using namespace ApprovalTests;
 

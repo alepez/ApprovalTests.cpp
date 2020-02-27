@@ -26,6 +26,7 @@ add_library(${PROJECT_NAME}
         reporters/CombinationReporter.cpp
         reporters/CommandReporter.cpp
         reporters/ConvertForCygwin.cpp
+        reporters/CustomReporter.cpp
         reporters/DefaultReporter.cpp
         reporters/DefaultReporterDisposer.cpp
         reporters/DefaultReporterFactory.cpp
