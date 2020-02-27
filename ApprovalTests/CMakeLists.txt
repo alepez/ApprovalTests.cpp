@@ -21,6 +21,7 @@ add_library(${PROJECT_NAME}
         reporters/DefaultReporterDisposer.cpp
         reporters/DefaultReporterFactory.cpp
         reporters/DiffInfo.cpp
+        utilities/FileUtilsSystemSpecific.cpp
         utilities/FileUtils.cpp
         utilities/StringUtils.cpp
         utilities/SystemUtils.cpp
