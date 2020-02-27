@@ -22,6 +22,7 @@ add_library(${PROJECT_NAME}
         reporters/DefaultReporterFactory.cpp
         reporters/DiffInfo.cpp
         utilities/FileUtils.cpp
+        utilities/StringUtils.cpp
         utilities/SystemUtils.cpp
         )
 add_library(ApprovalTests::ApprovalTests ALIAS ApprovalTests)
