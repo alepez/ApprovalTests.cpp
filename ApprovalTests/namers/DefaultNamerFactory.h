@@ -1,15 +1,13 @@
 #ifndef APPROVALTESTS_CPP_DEFAULTNAMERFACTORY_H
 #define APPROVALTESTS_CPP_DEFAULTNAMERFACTORY_H
 
-#include "ApprovalTests/core/ApprovalNamer.h"
-#include "ApprovalTestNamer.h"
-
 #include <memory>
-#include <utility>
 #include <functional>
 
 namespace ApprovalTests
 {
+    class ApprovalNamer;
+    class ApprovalNamer;
 
     using NamerCreator = std::function<std::shared_ptr<ApprovalNamer>()>;
 
@@ -17,24 +15,12 @@ namespace ApprovalTests
     class DefaultNamerFactory
     {
     private:
-        static NamerCreator& defaultNamer()
-        {
-            static NamerCreator namer = []() {
-                return std::make_shared<ApprovalTestNamer>();
-            };
-            return namer;
-        }
+        static NamerCreator& defaultNamer();
 
     public:
-        static NamerCreator getDefaultNamer()
-        {
-            return defaultNamer();
-        }
+        static NamerCreator getDefaultNamer();
 
-        static void setDefaultNamer(NamerCreator namer)
-        {
-            defaultNamer() = std::move(namer);
-        }
+        static void setDefaultNamer(NamerCreator namer);
     };
 }
 
