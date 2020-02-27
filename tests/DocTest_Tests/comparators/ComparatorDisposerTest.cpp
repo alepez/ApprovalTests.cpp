@@ -4,6 +4,7 @@
 #include <fstream>
 #include <iterator>
 #include <memory>
+#include <ApprovalTests/core/FileApprover.h>
 
 using namespace ApprovalTests;
 

@@ -1,18 +1,9 @@
 #ifndef APPROVALTESTS_CPP_APPROVALS_H
 #define APPROVALTESTS_CPP_APPROVALS_H
 
-#include <string>
-#include <functional>
-#include <exception>
-
-#include "ApprovalTests/ApprovalTestsVersion.h"
-#include "ApprovalTests/core/FileApprover.h"
 #include "reporters/DefaultReporter.h"
 #include "reporters/DefaultReporterDisposer.h"
-#include "ApprovalTests/core/Reporter.h"
-#include "namers/ApprovalTestNamer.h"
-#include "writers/ExistingFile.h"
-#include "namers/ExistingFileNamer.h"
+#include "reporters/FrontLoadedReporterDisposer.h"
 #include "namers/SubdirectoryDisposer.h"
 #include "namers/DefaultNamerDisposer.h"
 
