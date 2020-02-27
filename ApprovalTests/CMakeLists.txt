@@ -12,7 +12,7 @@ add_library(${PROJECT_NAME}
         namers/DefaultNamerDisposer.cpp
         reporters/DefaultReporterFactory.cpp
         comparators/ComparatorDisposer.cpp
-        comparators/ComparatorFactory.cpp comparators/TextFileComparator.cpp utilities/SystemUtils.cpp)
+        comparators/ComparatorFactory.cpp comparators/TextFileComparator.cpp utilities/SystemUtils.cpp reporters/CommandReporter.cpp)
 add_library(ApprovalTests::ApprovalTests ALIAS ApprovalTests)
 target_include_directories(${PROJECT_NAME}
         PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/..
