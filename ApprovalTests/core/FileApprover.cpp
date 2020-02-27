@@ -4,6 +4,7 @@
 #include "ApprovalTests/core/ApprovalNamer.h"
 #include "ApprovalTests/reporters/FrontLoadedReporterDisposer.h"
 #include "ApprovalTests/comparators/ComparatorFactory.h"
+#include "ApprovalTests/core/ApprovalWriter.h"
 
 ApprovalTests::ComparatorDisposer
 ApprovalTests::FileApprover::registerComparatorForExtension(

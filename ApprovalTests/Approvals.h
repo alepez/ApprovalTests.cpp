@@ -10,6 +10,8 @@
 
 namespace ApprovalTests
 {
+    class ApprovalWriter;
+
     class Approvals
     {
     private:

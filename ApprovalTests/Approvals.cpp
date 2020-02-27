@@ -3,6 +3,7 @@
 #include "core/FileApprover.h"
 #include "writers/ExistingFile.h"
 #include "namers/ExistingFileNamer.h"
+#include "writers/StringWriter.h"
 
 namespace ApprovalTests
 {

@@ -17,6 +17,7 @@
 #include "ApprovalTests/utilities/StringUtils.h"
 #include "ApprovalTests/utilities/Macros.h"
 
+#include <sys/stat.h>
 #include <stdexcept>
 
 namespace ApprovalTests
