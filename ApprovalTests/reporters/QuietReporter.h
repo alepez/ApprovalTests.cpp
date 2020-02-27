@@ -10,10 +10,7 @@ namespace ApprovalTests
     {
     public:
         bool report(std::string /*received*/,
-                    std::string /*approved*/) const override
-        {
-            return true;
-        }
+                    std::string /*approved*/) const override;
     };
 }
 
