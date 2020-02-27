@@ -1,6 +1,8 @@
 #ifndef APPROVALTESTS_CPP_APPROVALWRITER_H
 #define APPROVALTESTS_CPP_APPROVALWRITER_H
 
+#include <string>
+
 namespace ApprovalTests
 {
     class ApprovalWriter
