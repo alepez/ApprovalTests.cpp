@@ -2,6 +2,7 @@
 #define APPROVALTESTS_CPP_DEFAULTREPORTERDISPOSER_H
 
 #include "DefaultReporterFactory.h"
+#include "ApprovalTests/utilities/Macros.h"
 
 namespace ApprovalTests
 {
