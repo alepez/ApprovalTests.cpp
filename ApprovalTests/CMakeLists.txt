@@ -16,6 +16,7 @@ add_library(${PROJECT_NAME}
         namers/SeparateApprovedAndReceivedDirectoriesNamer.cpp
         namers/SectionNameDisposer.cpp
         namers/HelpMessages.cpp
+        namers/SubdirectoryDisposer.cpp
         reporters/AutoApproveIfMissingReporter.cpp
         reporters/AutoApproveReporter.cpp
         reporters/CIBuildOnlyReporter.cpp

@@ -2,9 +2,9 @@
 #define APPROVALTESTS_CPP_SUBDIRECTORYDISPOSER_H
 
 #include "ApprovalTestNamer.h"
+#include "ApprovalTests/utilities/Macros.h"
 
 #include <string>
-#include <utility>
 
 namespace ApprovalTests
 {
@@ -15,19 +15,9 @@ namespace ApprovalTests
         std::string previous_result;
 
     public:
-        explicit SubdirectoryDisposer(std::string subdirectory)
-        {
-            previous_result =
-                ApprovalTestNamer::testConfiguration().subdirectory;
-            ApprovalTestNamer::testConfiguration().subdirectory =
-                std::move(subdirectory);
-        }
+        explicit SubdirectoryDisposer(std::string subdirectory);
 
-        ~SubdirectoryDisposer()
-        {
-            ApprovalTestNamer::testConfiguration().subdirectory =
-                previous_result;
-        }
+        ~SubdirectoryDisposer();
     };
 }
 
