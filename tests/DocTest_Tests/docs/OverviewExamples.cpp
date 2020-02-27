@@ -1,6 +1,7 @@
 #include "doctest/doctest.h"
 #include "ApprovalTests/Approvals.h"
 
+#include <algorithm>
 #include <sstream>
 #include <string>
 #include <vector>
