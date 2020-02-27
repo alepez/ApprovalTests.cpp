@@ -11,7 +11,7 @@ add_library(${PROJECT_NAME}
         namers/DefaultNamerFactory.cpp
         namers/DefaultNamerDisposer.cpp
         reporters/DefaultReporterFactory.cpp
-        )
+        comparators/ComparatorDisposer.cpp)
 add_library(ApprovalTests::ApprovalTests ALIAS ApprovalTests)
 target_include_directories(${PROJECT_NAME}
         PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/..
