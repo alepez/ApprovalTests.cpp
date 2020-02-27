@@ -1,11 +1,11 @@
 #include "doctest/doctest.h"
 #include "ApprovalTests/comparators/ComparatorDisposer.h"
 #include "ApprovalTests/core/ApprovalException.h"
+#include "ApprovalTests/core/FileApprover.h"
 #include "Approvals.h"
 #include <fstream>
 #include <iterator>
 #include <memory>
-#include <ApprovalTests/core/FileApprover.h>
 
 using namespace ApprovalTests;
 
