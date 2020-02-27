@@ -1,9 +1,7 @@
 #ifndef APPROVALTESTS_CPP_EXISTINGFILENAMER_H
 #define APPROVALTESTS_CPP_EXISTINGFILENAMER_H
 
-#include <utility>
 #include "ApprovalTests/core/ApprovalNamer.h"
-#include "DefaultNamerFactory.h"
 
 namespace ApprovalTests
 {
@@ -12,21 +10,13 @@ namespace ApprovalTests
         std::string filePath;
 
     public:
-        explicit ExistingFileNamer(std::string filePath)
-            : filePath(std::move(filePath))
-        {
-        }
+        explicit ExistingFileNamer(std::string filePath);
+
         virtual std::string
-        getApprovedFile(std::string extensionWithDot) const override
-        {
-            return DefaultNamerFactory::getDefaultNamer()()->getApprovedFile(
-                extensionWithDot);
-        }
+        getApprovedFile(std::string extensionWithDot) const override;
+
         virtual std::string
-            getReceivedFile(std::string /*extensionWithDot*/) const override
-        {
-            return filePath;
-        }
+            getReceivedFile(std::string /*extensionWithDot*/) const override;
     };
 }
 
