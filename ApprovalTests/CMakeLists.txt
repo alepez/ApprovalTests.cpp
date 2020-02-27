@@ -36,6 +36,7 @@ add_library(${PROJECT_NAME}
         reporters/FirstWorkingReporter.cpp
         reporters/FrontLoadedReporterDisposer.cpp
         reporters/FrontLoadedReporterFactory.cpp
+        reporters/GenericDiffReporter.cpp
         reporters/TextDiffReporter.cpp
         utilities/ExceptionCollector.cpp
         utilities/FileUtilsSystemSpecific.cpp
