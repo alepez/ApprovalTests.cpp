@@ -3,7 +3,6 @@
 
 #include <string>
 
-// <SingleHpp unalterable>
 namespace ApprovalTests
 {
     class HelpMessages
@@ -17,6 +16,5 @@ namespace ApprovalTests
         static std::string topAndTailHelpMessage(const std::string& message);
     };
 }
-// </SingleHpp>
 
 #endif //APPROVALTESTS_CPP_HELPMESSAGES_H

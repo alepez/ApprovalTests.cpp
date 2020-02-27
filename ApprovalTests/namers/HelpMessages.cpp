@@ -2,6 +2,7 @@
 
 #include "ApprovalTests/utilities/StringUtils.h"
 
+// <SingleHpp unalterable>
 namespace ApprovalTests
 {
     std::string
@@ -63,3 +64,4 @@ namespace ApprovalTests
         return lineBreak + '\n' + lineBuffer + message + lineBuffer + lineBreak;
     }
 }
+// </SingleHpp>
