@@ -1,6 +1,17 @@
 project(ApprovalTests CXX)
 set(CMAKE_CXX_STANDARD 11)
-add_library(${PROJECT_NAME} Approvals.cpp reporters/DefaultReporter.cpp reporters/DefaultReporterDisposer.cpp reporters/AutoApproveIfMissingReporter.cpp reporters/AutoApproveReporter.cpp core/FileApprover.cpp core/ApprovalException.cpp namers/DefaultNamerFactory.cpp namers/DefaultNamerDisposer.cpp reporters/DefaultReporterFactory.cpp)
+add_library(${PROJECT_NAME}
+        Approvals.cpp
+        reporters/DefaultReporter.cpp
+        reporters/DefaultReporterDisposer.cpp
+        reporters/AutoApproveIfMissingReporter.cpp
+        reporters/AutoApproveReporter.cpp
+        core/FileApprover.cpp
+        core/ApprovalException.cpp
+        namers/DefaultNamerFactory.cpp
+        namers/DefaultNamerDisposer.cpp
+        reporters/DefaultReporterFactory.cpp
+        )
 add_library(ApprovalTests::ApprovalTests ALIAS ApprovalTests)
 target_include_directories(${PROJECT_NAME}
         PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/..
