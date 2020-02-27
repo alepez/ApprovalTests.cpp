@@ -12,6 +12,7 @@ add_library(${PROJECT_NAME}
         namers/DefaultNamerDisposer.cpp
         namers/DefaultNamerFactory.cpp
         namers/ExistingFileNamer.cpp
+        namers/NamerFactory.cpp
         namers/SeparateApprovedAndReceivedDirectoriesNamer.cpp
         namers/HelpMessages.cpp
         reporters/AutoApproveIfMissingReporter.cpp

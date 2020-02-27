@@ -2,6 +2,7 @@
 #define APPROVALTESTS_CPP_SECTIONNAMEDISPOSER_H
 
 #include "ApprovalTestNamer.h"
+#include "ApprovalTests/utilities/Macros.h"
 
 namespace ApprovalTests
 {
