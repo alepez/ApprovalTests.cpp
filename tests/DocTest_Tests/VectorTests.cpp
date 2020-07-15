@@ -46,3 +46,8 @@ TEST_CASE("VerifyAllStartingPoint")
     });
 }
 // end-snippet
+
+TEST_CASE("YouCanVerifyInitializerLists")
+{
+    Approvals::verifyAll(std::initializer_list<int>{10, 20, 30});
+}
