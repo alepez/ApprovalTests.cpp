@@ -50,4 +50,12 @@ TEST_CASE("VerifyAllStartingPoint")
 TEST_CASE("YouCanVerifyInitializerLists")
 {
     Approvals::verifyAll(std::initializer_list<int>{10, 20, 30});
+    Approvals::verifyAll({10, 20, 30});
+    Approvals::verifyAll("", {10, 20, 30}, Options());
+    int i = 0;
+    Approvals::verifyAll(
+        "",
+        {10, 20, 30},
+        [&](int e, std::ostream& s) { s << "[" << i++ << "] = " << e; },
+        Options());
 }

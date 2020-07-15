@@ -80,12 +80,12 @@ namespace ApprovalTests
          */
         ///@{
         template <typename Iterator>
-        static void verifyAll(
-            const std::string& header,
-            const Iterator& start,
-            const Iterator& finish,
-            std::function<void(decltype(*start), std::ostream&)> converter,
-            const Options& options = Options())
+        static void
+        verifyAll(const std::string& header,
+                  const Iterator& start,
+                  const Iterator& finish,
+                  std::function<void(decltype(*start), std::ostream&)> converter,
+                  const Options& options = Options())
         {
             std::stringstream s;
             if (!header.empty())
@@ -128,10 +128,33 @@ namespace ApprovalTests
         }
 
         template <typename Container>
-        static void verifyAll(const Container& list,
-                              const Options& options = Options())
+        static void verifyAll(const Container& list, const Options& options = Options())
         {
             verifyAll<Container>("", list, options);
+        }
+
+        template <typename T>
+        static void verifyAll(const std::string& header,
+                              const std::initializer_list<T>& list,
+                              std::function<void(typename std::initializer_list<T>::value_type, std::ostream&)> converter,
+                              const Options& options = Options())
+        {
+            verifyAll<std::initializer_list<T>>(header, list, converter, options);
+        }
+
+        template <typename T>
+        static void verifyAll(const std::string& header,
+                              const std::initializer_list<T>& list,
+                              const Options& options = Options())
+        {
+            verifyAll<std::initializer_list<T>>(header, list, options);
+        }
+
+        template <typename T>
+        static void verifyAll(const std::initializer_list<T>& list,
+                              const Options& options = Options())
+        {
+            verifyAll<std::initializer_list<T>>("", list, options);
         }
         ///@}
 
