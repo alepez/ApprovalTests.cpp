@@ -106,6 +106,11 @@ namespace ApprovalTests
 
             APPROVAL_TESTS_MACROS_ENTRY(BEYOND_COMPARE,
                                         DiffInfo("bcompare", Type::TEXT_AND_IMAGE))
+
+            APPROVAL_TESTS_MACROS_ENTRY(CLION,
+                                        DiffInfo("/opt/clion/bin/clion.sh",
+                                                 "diff {Received} {Approved}",
+                                                 Type::TEXT))
         }
 
         namespace Windows

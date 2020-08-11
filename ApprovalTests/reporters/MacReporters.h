@@ -63,7 +63,6 @@ namespace ApprovalTests
             TkDiffReporter();
         };
 
-        // Note that this will be found on Linux too.
         // See https://github.com/approvals/ApprovalTests.cpp/issues/138 for limitations
         class CLionDiffReporter : public GenericDiffReporter
         {

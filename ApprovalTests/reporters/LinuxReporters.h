@@ -55,6 +55,13 @@ namespace ApprovalTests
             BeyondCompareReporter();
         };
 
+        // See https://github.com/approvals/ApprovalTests.cpp/issues/138 for limitations
+        class CLionDiffReporter : public GenericDiffReporter
+        {
+        public:
+            CLionDiffReporter();
+        };
+
         class LinuxDiffReporter : public FirstWorkingReporter
         {
         public:

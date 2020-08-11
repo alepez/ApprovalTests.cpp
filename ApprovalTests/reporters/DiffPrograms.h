@@ -47,6 +47,8 @@ namespace ApprovalTests
             DiffInfo MELD();
 
             DiffInfo BEYOND_COMPARE();
+
+            DiffInfo CLION();
         }
 
         namespace Windows

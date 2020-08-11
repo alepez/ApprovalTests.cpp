@@ -50,14 +50,19 @@ namespace ApprovalTests
         {
         }
 
+        CLionDiffReporter::CLionDiffReporter()
+            : GenericDiffReporter(DiffPrograms::Linux::CLION())
+        {
+        }
+
         LinuxDiffReporter::LinuxDiffReporter()
             : FirstWorkingReporter({
                   // begin-snippet: linux_diff_reporters
                   new BeyondCompareReporter(),
                   new MeldReporter(),
                   new SublimeMergeReporter(),
+                  new CLionDiffReporter(),
                   new KDiff3Reporter()
-                  // Note: ApprovalTests::Mac::CLionDiffReporter also works on Linux
                   // end-snippet
               })
         {
