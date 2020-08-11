@@ -50,7 +50,7 @@ namespace ApprovalTests
     std::string SystemLauncher::getUnixCommandLine(const std::string& commandLine,
                                                    bool foreground) const
     {
-        std::string launch = foreground ? commandLine : (commandLine + " &");
+        std::string launch = foreground ? commandLine : (commandLine + " 1>/dev/null 2>/dev/null </dev/null &");
 
         return launch;
     }
